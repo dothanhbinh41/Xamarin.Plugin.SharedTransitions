@@ -10,8 +10,8 @@
     <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Plugin.SharedTransitions.Platforms.Android</RootNamespace>
-    <AssemblyName>Plugin.SharedTransitions.Platforms.Android</AssemblyName>
+    <RootNamespace>Plugin.Transitions.Platforms.Android</RootNamespace>
+    <AssemblyName>Plugin.Transitions.Platforms.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -56,10 +56,10 @@
     <Compile Include="Renderers\SharedTransitionPageRenderer.cs" />
     <Compile Include="Renderers\SharedTransitionShellItemRenderer.cs" />
     <Compile Include="Renderers\SharedTransitionShellRenderer.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="TransitionEffect.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2401</Version>
     </PackageReference>

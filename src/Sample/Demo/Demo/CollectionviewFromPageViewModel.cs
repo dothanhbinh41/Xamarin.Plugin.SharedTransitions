@@ -32,7 +32,7 @@ namespace TransitionApp.ViewModels
                SelectedDogId = selectedDog.Id;
                
                var navParam = new NavigationParameters {{nameof(selectedDog), selectedDog}}; 
-               await navigationService.NavigateAsync($"{nameof(CollectionviewToPage)}",navParam);
+               await navigationService.NavigateAsync($"{nameof(CollectionviewToPage)}",navParam,useModalNavigation:false,animated:true);
             });
 
             var description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
