@@ -136,9 +136,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedTransitions\SharedTransitions.csproj">
-      <Project>{447b5f11-2f97-4e1d-89ff-b8dc2889b81b}</Project>
-      <Name>SharedTransitions</Name>
+    <ProjectReference Include="..\..\..\Libs\NewSharedTransitions.iOS\NewSharedTransitions.iOS.csproj">
+      <Project>{8116be6c-40e9-4dcf-8589-fe5675c7696a}</Project>
+      <Name>NewSharedTransitions.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libs\NewSharedTransitions\NewSharedTransitions.csproj">
+      <Project>{d1c1a7e1-0fd8-46ba-ad1d-ef44df5f35cf}</Project>
+      <Name>NewSharedTransitions</Name>
     </ProjectReference>
     <ProjectReference Include="..\TransitionShellApp\TransitionShellApp.csproj">
       <Project>{7702F653-FEC7-4AFB-AA8C-407997B7C478}</Project>

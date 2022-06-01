@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedTransitions\SharedTransitions.csproj" />
+    <ProjectReference Include="..\..\..\Libs\NewSharedTransitions\NewSharedTransitions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
