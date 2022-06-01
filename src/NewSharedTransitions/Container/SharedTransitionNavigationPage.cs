@@ -11,6 +11,7 @@ namespace Plugin.Transitions
     /// <seealso cref="Xamarin.Forms.NavigationPage" />
     public class SharedTransitionNavigationPage : NavigationPage, ISharedTransitionContainer
     {
+        public const long DurationDefault = 300l;
         /// <summary>
         /// Map for all transitions (and support properties) associated with this SharedTransitionNavigationPage
         /// </summary>
@@ -35,7 +36,7 @@ namespace Plugin.Transitions
         /// The shared transition duration (in ms) associated with the current page in stack
         /// </summary>
         public static readonly BindableProperty TransitionDurationProperty =
-            BindableProperty.CreateAttached("TransitionDuration", typeof(long), typeof(SharedTransitionNavigationPage), (long)300);
+            BindableProperty.CreateAttached("TransitionDuration", typeof(long), typeof(SharedTransitionNavigationPage), DurationDefault);
 
         public ObservableProperty<SharedTransitionEventArgs> CurrentTransition { get; } =
             new ObservableProperty<SharedTransitionEventArgs>(null);

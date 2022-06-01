@@ -95,14 +95,14 @@ namespace Plugin.Transitions.Platforms.Android
 
         public SharedTransitionNavigationPageRenderer(Context context) : base(context)
         {
-            SupportFragmentManager = ((FormsAppCompatActivity)Context).SupportFragmentManager;
+            SupportFragmentManager = (Context).GetFragmentManager();
 
             //We need the last FragmentManager in Hyerarchy (for tabbed/masterpage)
             _navigationTransition = new NavigationTransition(this);
         }
 
 
-        protected override async void SetupPageTransition(FragmentTransaction transaction, bool isPush)
+        protected override void SetupPageTransition(FragmentTransaction transaction, bool isPush)
         {
             if (_popToRoot || Build.VERSION.SdkInt < BuildVersionCodes.Lollipop)
             {
@@ -115,7 +115,6 @@ namespace Plugin.Transitions.Platforms.Android
                 {
                     _navigationTransition.SetupPageTransition(transaction, isPush);
                 });
-               ;
             }
         }
 
@@ -151,7 +150,6 @@ namespace Plugin.Transitions.Platforms.Android
             PropertiesContainer = Element.Navigation.NavigationStack.Count == 1
                 ? page
                 : ((INavigationPageController)Element).Peek(1);
-
             /*
              * IMPORTANT!
              *
@@ -163,9 +161,11 @@ namespace Plugin.Transitions.Platforms.Android
              */
             var mapStack = TransitionMap.GetMap(PropertiesContainer, null, true);
             if (mapStack?.Count > 0 && mapStack.Any(x => !string.IsNullOrEmpty(x.TransitionGroup)))
-                await Task.Yield();
-            var result = await base.OnPushAsync(page, animated);
-            return result;
+            {
+              //  await Task.Yield();
+            }
+             
+            return await base.OnPushAsync(page, animated);
         }
 
         protected override async Task<bool> OnPopViewAsync(Page page, bool animated)
