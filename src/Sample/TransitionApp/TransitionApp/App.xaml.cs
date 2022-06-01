@@ -4,7 +4,10 @@ using Prism.Ioc;
 using TransitionApp.ViewModels;
 using TransitionApp.Views;
 using TransitionApp.Views.Collectionview;
+using TransitionApp.Views.Image;
+using TransitionApp.Views.Layout;
 using TransitionApp.Views.Listview;
+using TransitionApp.Views.Main;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -26,7 +29,7 @@ namespace TransitionApp
             InitializeComponent();
 
             //Standard navigationpage
-            //await NavigationService.NavigateAsync($"{nameof(SharedTransitionNavigationPage)}/{nameof(MainPage)}");
+            await NavigationService.NavigateAsync($"{nameof(SharedTransitionNavigationPage)}/{nameof(TransitionApp.Views.Main.MainPage)}");
 
             //Tabbed Page
             //await NavigationService.NavigateAsync(nameof(MainTabbedPage));
@@ -40,6 +43,11 @@ namespace TransitionApp
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<SharedTransitionNavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<ImageFromPage>();
+            containerRegistry.RegisterForNavigation<ImageToPage>();
+            containerRegistry.RegisterForNavigation<LayoutFromPage>();
+            containerRegistry.RegisterForNavigation<LayoutToPage>();
             containerRegistry.RegisterForNavigation<ListViewFromPage, ListViewFromPageViewModel>();
             containerRegistry.RegisterForNavigation<ListViewToPage, CollectionviewToPageViewModel>();
             containerRegistry.RegisterForNavigation<CollectionviewFromPage, CollectionviewFromPageViewModel>();
