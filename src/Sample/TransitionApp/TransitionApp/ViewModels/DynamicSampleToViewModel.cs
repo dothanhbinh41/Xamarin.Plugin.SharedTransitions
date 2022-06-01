@@ -5,7 +5,7 @@ using TransitionApp.Models;
 
 namespace TransitionApp.ViewModels
 {
-    public class CollectionviewToPageViewModel : ViewModelBase, IAutoInitialize
+    public class CollectionviewToPageViewModel : ViewModelBase
     {
         private List<DogModel> _dogs;
         public List<DogModel> Dogs
@@ -23,6 +23,12 @@ namespace TransitionApp.ViewModels
 
         public CollectionviewToPageViewModel(INavigationService navigationService) : base(navigationService)
         {
+        }
+
+        public override void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+            SelectedDog = parameters.GetValue<DogModel>("selectedDog");
         }
     }
 }

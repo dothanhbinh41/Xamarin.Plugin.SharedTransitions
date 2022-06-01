@@ -2,7 +2,7 @@
 using SupportTransitions = AndroidX.Transitions;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
 	public interface ITransitionRenderer
 	{

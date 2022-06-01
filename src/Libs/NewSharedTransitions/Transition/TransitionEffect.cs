@@ -2,7 +2,7 @@
 using System.Linq;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     /// <summary>
     /// Transition effect used to specify tags to views

@@ -1,16 +1,16 @@
 ﻿using System.Linq;
 using Android.App;
-using Plugin.Transitions.Platforms.Android.Extensions;
+using Plugin.SharedTransitions.Platforms.Android.Extensions;
 using View = Android.Views.View;
-using Plugin.Transitions.Platforms.Android; 
+using Plugin.SharedTransitions.Platforms.Android; 
 using Fragment = AndroidX.Fragment.App.Fragment;
 using FragmentTransaction = AndroidX.Fragment.App.FragmentTransaction;
-using Resource = Plugin.Transitions.Platforms.Android.Resource;
+using Resource = Plugin.SharedTransitions.Platforms.Android.Resource;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using AndroidX.Core.View;
 
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
 	/*
 	 * IMPORTANT NOTES:

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     /// <summary>
     /// Interface for TransitionMapper 

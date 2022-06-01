@@ -10,7 +10,7 @@
              x:Class="TransitionApp.Views.Collectionview.CollectionviewToPage" Title="Collectionview Sample">
 
 <ScrollView>
-    <yummy:PancakeView CornerRadius="0" Padding="0" BackgroundGradientStartColor="DarkSlateBlue" BackgroundGradientEndColor="DodgerBlue"
+    <yummy:PancakeView CornerRadius="0" Padding="0" BackgroundColor="DarkSlateBlue"  
                              sharedTransitions:Transition.Name="DogBackground">
 
         <StackLayout Spacing="20">

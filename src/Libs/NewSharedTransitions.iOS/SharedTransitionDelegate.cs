@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using ObjCRuntime;
-using Plugin.Transitions;
+using Plugin.SharedTransitions;
 using UIKit;
 
 namespace Plugin.SharedTransitions.Platforms.iOS

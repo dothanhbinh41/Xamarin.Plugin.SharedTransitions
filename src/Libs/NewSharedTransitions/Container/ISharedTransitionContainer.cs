@@ -1,7 +1,7 @@
 ﻿using System;
-using Plugin.Transitions.Shared.Utils;
+using Plugin.SharedTransitions.Shared.Utils;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
 	/// <summary>
 	/// Container Page with support for shared transitions

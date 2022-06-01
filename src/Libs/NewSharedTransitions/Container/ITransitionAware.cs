@@ -1,4 +1,4 @@
-﻿namespace Plugin.Transitions
+﻿namespace Plugin.SharedTransitions
 {
     public interface ITransitionAware
     {

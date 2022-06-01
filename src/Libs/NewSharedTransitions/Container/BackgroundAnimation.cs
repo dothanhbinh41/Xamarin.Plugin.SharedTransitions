@@ -1,4 +1,4 @@
-﻿namespace Plugin.Transitions
+﻿namespace Plugin.SharedTransitions
 {
     /// <summary>
     /// Background Animation Type

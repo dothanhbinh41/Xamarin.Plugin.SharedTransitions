@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
-using Plugin.Transitions.Shared.Utils;
+using Plugin.SharedTransitions.Shared.Utils;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     /// <summary>
     /// Shell with support for shared transitions

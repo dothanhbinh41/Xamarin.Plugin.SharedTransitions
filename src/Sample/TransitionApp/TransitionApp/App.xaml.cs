@@ -9,8 +9,7 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TransitionApp
-{
-    [AutoRegisterForNavigation]
+{ 
     public partial class App
     {
         /* 

@@ -4,7 +4,7 @@ using FragmentManager = AndroidX.Fragment.App.FragmentManager;
 using Fragment = AndroidX.Fragment.App.Fragment;
 
 
-namespace Plugin.Transitions.Platforms.Android.Extensions
+namespace Plugin.SharedTransitions.Platforms.Android.Extensions
 {
 	public static class ViewExtensions
 	{

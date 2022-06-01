@@ -4,14 +4,14 @@ using System.Linq;
 using Android.Content;
 using AndroidX.Fragment.App;
 using AndroidX.Transitions;
-using Plugin.Transitions.Platforms.Android;
+using Plugin.SharedTransitions.Platforms.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using AView = Android.Views.View;
-using ResourceX = Plugin.Transitions.Platforms.Android.Resource;
+using ResourceX = Plugin.SharedTransitions.Platforms.Android.Resource;
 
 [assembly: ExportRenderer(typeof(Page), typeof(SharedTransitionPageRenderer))]
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
     public class SharedTransitionPageRenderer : PageRenderer
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using Plugin.SharedTransitions;
-using Plugin.Transitions;
+using Plugin.SharedTransitions;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 

@@ -4,17 +4,17 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Android.OS;
-using Plugin.Transitions;
-using Plugin.Transitions.Platforms.Android;
+using Plugin.SharedTransitions;
+using Plugin.SharedTransitions.Platforms.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 using Context = Android.Content.Context;
 using View = Android.Views.View;
-using Plugin.Transitions.Platforms.Android.Extensions;
+using Plugin.SharedTransitions.Platforms.Android.Extensions;
 
-using ResourceX = Plugin.Transitions.Platforms.Android.Resource;
+using ResourceX = Plugin.SharedTransitions.Platforms.Android.Resource;
 
 using Fragment = AndroidX.Fragment.App.Fragment;
 using Toolbar = AndroidX.AppCompat.Widget.Toolbar;
@@ -24,7 +24,7 @@ using SupportTransitions = AndroidX.Transitions;
 
 
 [assembly: ExportRenderer(typeof(SharedTransitionNavigationPage), typeof(SharedTransitionNavigationPageRenderer))]
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
     /*
      * IMPORTANT NOTES:

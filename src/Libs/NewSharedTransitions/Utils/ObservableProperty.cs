@@ -1,4 +1,4 @@
-﻿namespace Plugin.Transitions.Shared.Utils
+﻿namespace Plugin.SharedTransitions.Shared.Utils
 {
     /// <summary>
     /// Get an event when a property changes

@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Plugin.Transitions.Platforms.Android.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Plugin.SharedTransitions.Platforms.Android.Resource", IsApplication=false)]
 
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
 	
 	

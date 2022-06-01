@@ -1,14 +1,14 @@
 ﻿using Android.OS;
 using System.ComponentModel;
-using Plugin.Transitions;
+using Plugin.SharedTransitions;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using AndroidViews = Android.Views;
 
 [assembly: ResolutionGroupName(Transition.ResolutionGroupName)]
-[assembly: ExportEffect(typeof(Plugin.Transitions.Platforms.Android.TransitionEffect), Transition.EffectName)]
+[assembly: ExportEffect(typeof(Plugin.SharedTransitions.Platforms.Android.TransitionEffect), Transition.EffectName)]
 
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
     public class TransitionEffect : PlatformEffect
     {

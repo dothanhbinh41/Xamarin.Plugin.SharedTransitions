@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     public static class PageExtensions
     {

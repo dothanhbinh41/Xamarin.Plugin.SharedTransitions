@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     public class SharedTransitionEventArgs : EventArgs
     {

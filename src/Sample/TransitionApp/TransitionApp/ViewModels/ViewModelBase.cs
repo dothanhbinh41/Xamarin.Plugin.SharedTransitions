@@ -3,7 +3,7 @@ using Prism.Navigation;
 
 namespace TransitionApp.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase, INavigationAware, IDestructible,IInitialize
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -30,6 +30,10 @@ namespace TransitionApp.ViewModels
         public virtual void Destroy()
         {
 
+        }
+
+        public virtual void Initialize(INavigationParameters parameters)
+        { 
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Diagnostics; 
 using SupportTransitions = AndroidX.Transitions; 
 
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
     public class NavigationTransitionListener : SupportTransitions.TransitionListenerAdapter
     {

@@ -1,11 +1,11 @@
 ﻿using Android.Content;
-using Plugin.Transitions;
-using Plugin.Transitions.Platforms.Android;
+using Plugin.SharedTransitions;
+using Plugin.SharedTransitions.Platforms.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly:ExportRenderer(typeof(SharedTransitionShell), typeof(SharedTransitionShellRenderer))]
-namespace Plugin.Transitions.Platforms.Android
+namespace Plugin.SharedTransitions.Platforms.Android
 {
 	public class SharedTransitionShellRenderer : ShellRenderer
 	{

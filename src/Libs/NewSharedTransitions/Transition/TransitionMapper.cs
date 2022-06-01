@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using Xamarin.Forms;
 
-namespace Plugin.Transitions
+namespace Plugin.SharedTransitions
 {
     /// <summary>
     /// TransitionMapper implementation
