@@ -93,10 +93,6 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Droid\NewSharedTransitions.Droid.csproj">
-      <Project>{d4d97aec-826a-40f3-afe0-a87991bc957a}</Project>
-      <Name>NewSharedTransitions.Droid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\NewSharedTransitions\NewSharedTransitions.csproj">
       <Project>{381dbcfd-1690-4c46-97d7-3a195a13303d}</Project>
       <Name>NewSharedTransitions</Name>
