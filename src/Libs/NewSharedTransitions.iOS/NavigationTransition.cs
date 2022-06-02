@@ -278,14 +278,14 @@ namespace Plugin.SharedTransitions.Platforms.iOS
             //fix animation for push & pop
             if (_operation == UINavigationControllerOperation.Pop)
             {
-                backgroundAnimation = backgroundAnimation switch
-                {
-                    BackgroundAnimation.SlideFromBottom => BackgroundAnimation.SlideFromTop,
-                    BackgroundAnimation.SlideFromTop => BackgroundAnimation.SlideFromBottom,
-                    BackgroundAnimation.SlideFromRight => BackgroundAnimation.SlideFromLeft,
-                    BackgroundAnimation.SlideFromLeft => BackgroundAnimation.SlideFromRight,
-                    _ => backgroundAnimation
-                };
+                //backgroundAnimation = backgroundAnimation switch
+                //{
+                //    BackgroundAnimation.SlideFromBottom => BackgroundAnimation.SlideFromTop,
+                //    BackgroundAnimation.SlideFromTop => BackgroundAnimation.SlideFromBottom,
+                //    BackgroundAnimation.SlideFromRight => BackgroundAnimation.SlideFromLeft,
+                //    BackgroundAnimation.SlideFromLeft => BackgroundAnimation.SlideFromRight,
+                //    _ => backgroundAnimation
+                //};
             }
 
             switch (backgroundAnimation)

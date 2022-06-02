@@ -207,6 +207,8 @@
     <ProjectReference Include="..\..\..\Libs\NewSharedTransitions.iOS\NewSharedTransitions.iOS.csproj">
       <Project>{8116be6c-40e9-4dcf-8589-fe5675c7696a}</Project>
       <Name>NewSharedTransitions.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Libs\NewSharedTransitions\NewSharedTransitions.csproj">
       <Project>{d1c1a7e1-0fd8-46ba-ad1d-ef44df5f35cf}</Project>

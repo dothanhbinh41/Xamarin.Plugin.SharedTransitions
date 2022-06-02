@@ -60,7 +60,9 @@
             <Button Text="Collectionview (multiple items)"  Command="{prism:NavigateTo 'CollectionviewFromPage'}" />
             <Label Text="With FFImageLoading &amp; PancakeView" Style="{StaticResource Info}" />
 
-            <Button Text="Back to Main Home" Command="{prism:NavigateTo '/HomePage'}" />
+            <Button
+                Text="MainTabbedPage"
+                Command="{prism:NavigateTo 'MainTabbedPage'}" />
 
         </StackLayout>
     </ScrollView>

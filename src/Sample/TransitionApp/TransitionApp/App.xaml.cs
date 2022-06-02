@@ -37,13 +37,14 @@ namespace TransitionApp
             //Master-Detail
             //await NavigationService.NavigateAsync(nameof(MainMasterDetailPage));
 
-            await NavigationService.NavigateAsync(nameof(HomePage));
+            //await NavigationService.NavigateAsync(nameof(HomePage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<SharedTransitionNavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MainTabbedPage>();
             containerRegistry.RegisterForNavigation<ImageFromPage>();
             containerRegistry.RegisterForNavigation<ImageToPage>();
             containerRegistry.RegisterForNavigation<LayoutFromPage>();

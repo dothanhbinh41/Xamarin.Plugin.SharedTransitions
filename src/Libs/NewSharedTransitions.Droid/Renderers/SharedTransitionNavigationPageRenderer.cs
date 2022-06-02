@@ -63,8 +63,14 @@ namespace Plugin.SharedTransitions.Platforms.Android
                 //We need to unsubscribe event, set the new value, then resubscribe for the new container
                 if (_propertiesContainer != null)
                     _propertiesContainer.PropertyChanged -= PropertiesContainerOnPropertyChanged;
-
-                _propertiesContainer = value;
+                if(value is TabbedPage tab)
+                {
+                    _propertiesContainer = tab.CurrentPage;
+                }
+                else
+                { 
+                    _propertiesContainer = value;
+                }
 
                 if (_propertiesContainer != null)
                 {
@@ -149,7 +155,7 @@ namespace Plugin.SharedTransitions.Platforms.Android
             //We save it immediately so we can access the Navigation options needed for the first transaction
             PropertiesContainer = Element.Navigation.NavigationStack.Count == 1
                 ? page
-                : ((INavigationPageController)Element).Peek(1);
+                : ((INavigationPageController)Element).Peek(1); 
             /*
              * IMPORTANT!
              *
@@ -174,8 +180,7 @@ namespace Plugin.SharedTransitions.Platforms.Android
 
             //We need to take the transition configuration from the destination page
             //At this point the pop is not started so we need to go back in the stack
-            PropertiesContainer = ((INavigationPageController)Element).Peek(1);
-
+            PropertiesContainer = ((INavigationPageController)Element).Peek(1); 
             /*
              * Without animation, we need Detach->Attach to recreate the fragment ui
              * Because wh are using SetReorderingAllowed  that cause mess when popping without animation or PopToRoot

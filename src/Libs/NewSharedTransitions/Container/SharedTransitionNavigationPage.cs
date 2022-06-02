@@ -11,7 +11,7 @@ namespace Plugin.SharedTransitions
     /// <seealso cref="Xamarin.Forms.NavigationPage" />
     public class SharedTransitionNavigationPage : NavigationPage, ISharedTransitionContainer
     {
-        public const long DurationDefault = 300l;
+        public const long DurationDefault = 300;
         /// <summary>
         /// Map for all transitions (and support properties) associated with this SharedTransitionNavigationPage
         /// </summary>

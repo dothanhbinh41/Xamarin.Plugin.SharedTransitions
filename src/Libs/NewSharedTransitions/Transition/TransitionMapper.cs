@@ -19,26 +19,28 @@ namespace Plugin.SharedTransitions
 
         public IReadOnlyList<TransitionDetail> GetMap(Page page, string selectedGroup, bool ignoreGroup = false)
         {
+            var p = GetCurrentPage(page);
             if (ignoreGroup)
-                return TransitionStack.Where(x => x.Page == page)
+                return TransitionStack.Where(x => x.Page == p)
                            .Select(x => x.Transitions.ToList())
                            .FirstOrDefault() ?? new List<TransitionDetail>();
 
-            return TransitionStack.Where(x => x.Page == page)
+            return TransitionStack.Where(x => x.Page == p)
                            .Select(x => x.Transitions.Where(tr=>tr.TransitionGroup == selectedGroup).ToList())
                            .FirstOrDefault() ?? new List<TransitionDetail>();
         }
 
         public void AddOrUpdate(Page page, string transitionName, string transitionGroup, bool isLightSnapshot, View view, object nativeView)
-        {
-            var transitionMap = _transitionStack.Value.FirstOrDefault(x => x.Page == page);
+        { 
+            var p = GetCurrentPage(page);
+            var transitionMap = _transitionStack.Value.FirstOrDefault(x => x.Page == p);
 
             if (transitionMap == null)
             {
 	            _transitionStack.Value.Add(
                     new TransitionMap
                     {
-                        Page = page,
+                        Page = p,
                         Transitions = new List<TransitionDetail> {CreateTransition(transitionName, transitionGroup, isLightSnapshot, view, nativeView)}
                     }
                 );
@@ -76,13 +78,15 @@ namespace Plugin.SharedTransitions
 
         public void Remove(Page page, View view)
         {
-            var transitionMap = _transitionStack.Value.FirstOrDefault(x=>x.Page == page);
+            var p = GetCurrentPage(page);
+            var transitionMap = _transitionStack.Value.FirstOrDefault(x=>x.Page == p);
             transitionMap?.Transitions.Remove(transitionMap.Transitions.FirstOrDefault(x=>x.View == view));
         }
 
         public void RemoveFromPage(Page page)
         {
-            _transitionStack.Value.Remove(_transitionStack.Value.FirstOrDefault(x => x.Page == page));
+            var p = GetCurrentPage(page);
+            _transitionStack.Value.Remove(_transitionStack.Value.FirstOrDefault(x => x.Page == GetCurrentPage(p)));
         }
 
         public TransitionDetail CreateTransition(string transitionName,string transitionGroup, bool isLightSnapshot, View view, object nativeView)
@@ -96,6 +100,17 @@ namespace Plugin.SharedTransitions
 	            IsLightSnapshot = isLightSnapshot,
 				NativeView      = new WeakReference(nativeView)
             };
+        }
+
+        Page GetCurrentPage(Page p)
+        {
+            switch (p)
+            {
+                case TabbedPage tab: 
+                    return tab.CurrentPage;
+                default:
+                    return p;
+            }
         }
     }
 }

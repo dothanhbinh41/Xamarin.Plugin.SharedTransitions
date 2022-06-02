@@ -20,8 +20,11 @@
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0" Source="what_the_dog.jpg" sharedTransitions:Transition.Name="WhatTheDog" />
-        <Image Grid.Column="1" Source="cute_dog.jpg" sharedTransitions:Transition.Name="CuteDog" />
+            <Image
+                Grid.Column="0"
+                Source="what_the_dog.jpg"
+                sharedTransitions:Transition.Name="WhatTheDog" BackgroundColor="Red" />
+            <Image Grid.Column="1" Source="cute_dog.jpg" sharedTransitions:Transition.Name="CuteDog" />
         <Image Grid.Column="2" Source="christmas_dog.jpg" sharedTransitions:Transition.Name="ChristmasDog" />
 
     </Grid>
